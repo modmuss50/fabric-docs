@@ -1,6 +1,12 @@
 {
   "image": "mcr.microsoft.com/devcontainers/java:21",
-  "ghcr.io/devcontainers/features/node:1": {
-    "version": "21.4.0"
-  }
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "21.4.0"
+    }
+  },
+  "postCreateCommand": "npm i",
+  "forwardPorts": [
+    5173
+  ]
 }
