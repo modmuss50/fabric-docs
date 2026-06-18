@@ -1,0 +1,10 @@
+{
+  "title": "Fixture Docs",
+  "description": "Fixture docs",
+  "authors.heading": "Authors",
+  "references.resources": "Resources",
+  "version.reminder.old_version": "This page is written for version **%s**.",
+  "nav.home": "Home",
+  "nav.contribute": "Contribute",
+  "footer.message": "Footer"
+}

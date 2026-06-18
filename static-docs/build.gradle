@@ -1,0 +1,41 @@
+plugins {
+	id "application"
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+application {
+	mainClass = "net.fabricmc.docs.staticgen.Main"
+}
+
+tasks.register("generateMainSite", JavaExec) {
+	group = "documentation"
+	description = "Generates the main Fabric docs static site into build/site."
+	classpath = sourceSets.main.runtimeClasspath
+	mainClass = application.mainClass
+	args "--root", "..", "--out", "build/site", "--threads", "auto", "--strict", "true"
+}
+
+tasks.register("serveMainSite", JavaExec) {
+	group = "documentation"
+	description = "Generates, watches, and serves the main Fabric docs static site on localhost:8080."
+	classpath = sourceSets.main.runtimeClasspath
+	mainClass = "net.fabricmc.docs.staticgen.PreviewServer"
+	args "--root", "..", "--out", "build/site", "--host", "localhost", "--port", "8080", "--threads", "auto", "--strict", "true", "--watch", "true", "--open", "false"
+}
+
+tasks.register("testHarness", JavaExec) {
+	group = "verification"
+	description = "Runs the dependency-free static docs generator tests."
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = "net.fabricmc.docs.staticgen.StaticDocsTest"
+}
+
+tasks.named("test") {
+	dependsOn("testHarness")
+	failOnNoDiscoveredTests = false
+}

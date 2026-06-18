@@ -1,0 +1,19 @@
+{
+  "develop.title": "Develop",
+  "develop.getting_started.creating_project": "Creating Project",
+  "develop.getting_started.project_structure": "Project Structure",
+  "develop.getting_started.setting_up": "Setting Up",
+  "develop.getting_started.opening_project": "Opening Project",
+  "develop.getting_started.launching_game": "Launching Game",
+  "develop.getting_started.generating_sources": "Generating Sources",
+  "develop.getting_started.building_mod": "Building Mod",
+  "develop.items": "Items",
+  "develop.blocks": "Blocks",
+  "develop.commands": "Commands",
+  "develop.rendering": "Rendering",
+  "develop.data_generation": "Data Generation",
+  "develop.misc.codecs": "Codecs",
+  "develop.misc.text_and_translations": "Text and Translations",
+  "develop.mixins.bytecode": "Bytecode",
+  "players.title": "Players"
+}
