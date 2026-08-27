@@ -213,6 +213,8 @@ dependencies {
 
 ::: details Migrating run configurations from the old API
 
+The new property based API is available in Loom 1.17 and later.
+
 Replace the old run configuration methods and properties with their property-based equivalents:
 
 | Old API                                        | Property-based API                                                      |
