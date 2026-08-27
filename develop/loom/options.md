@@ -227,4 +227,5 @@ Replace the old run configuration methods and properties with their property-bas
 | `runDir = value` / `runDir(value)`             | `runDirectory = file(value)`                                            |
 | `source = sourceSet` / `source(sourceSet)`     | `sourceSet = sourceSet.name`                                            |
 | `ideConfigGenerated = value`                   | `generateRunConfig = value`                                             |
+
 :::
